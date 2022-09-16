@@ -1,2 +1,72 @@
-
 Hello to the world of Object Oriented Programming!!
+
+Basics:
+1. Objects
+Everything is an object which occupies memory because it can be accessed,updated,deleted and created to assign some memory in the heap.
+
+2. Class
+It is a template of :
+    what properties my objects will have.(datatypes)
+    what they will be able to do.(functions)
+    can be designed to suit tthe nature of requirement of the use case of the problem.
+
+For example:
+    Create multiple records of students containing their names, marks in one subject and roll numbers.
+
+    Normal intuition:
+    create multiple string records of name for each student.
+    create multiple float records of marks.
+    create multiple integer records of roll number for each student.
+
+    Now think:
+    if you need to change any record for any student.
+    Take sam as your tenth record with marks 35 and roll 30.
+    Task : update marks to 40.
+    You would have to traverse 10 indexes in marks array to access Sam's marks and then update it.
+
+    Now what their is a new student to be inserted.You would have to shift positions in every array for it to adjust the new corresponding entries.
+
+    THIS IS A CHAOS!!! With just three attributes.
+
+    This is where the concept of Object Oriented Programming comes in!!.
+
+
+OOPS -- Object Oriented Programming
+
+Create a student class with three instance varialbles - name, marks and rollno.
+
+Keep on creating as many objects of type student using an array data structure of type class.
+Problem Solved...
+
+Class Student provided you template with your required values and you just have to keep on using them by creating objects of type student.
+
+Student         student  =       new                 Student();
+(class       (reference      (new allocates memory  default constructor
+ name)       to the object    during runtime)
+            memory address)                       
+      
+======compile time======     =========run time===================
+
+
+Constructor:
+You created an object student of type Class---fine.
+Now your object will look like this in memory
+
+student{
+    name = null;
+    marks = 0.0;
+    rollno = 0;
+}
+
+Because no values have been assigned to them.
+
+Constructor will do the work of assigning the values to your objects instance variables.
+
+Now constructor will do the work as follows
+
+Student(String var,float var,int var)
+{
+    this.name = var;
+    this.marks = var;
+    this.rollno = var;
+}
